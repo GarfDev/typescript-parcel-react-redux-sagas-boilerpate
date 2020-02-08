@@ -1,0 +1,50 @@
+{
+  "name": "webpack-react-redux-saga",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "parcel build ./app/index.html --experimental-scope-hoisting",
+    "build2": "parcel build --experimental-scope-hoisting ./app/index.html",
+    "lint": "lint-staged",
+    "start": "parcel serve app/index.html --open --no-autoinstall",
+    "start2": "parcel --open --no-autoinstall ./app/index.html",
+    "watch": "parcel watch app/index.html"
+  },
+  "devDependencies": {
+    "@types/history": "^4.7.5",
+    "@types/intl": "^1.2.0",
+    "@types/node": "^13.7.0",
+    "@types/react": "^16.9.19",
+    "@types/react-dom": "^16.9.5",
+    "@types/react-redux": "^7.1.7",
+    "@types/webpack-env": "^1.15.1",
+    "history": "^4.10.1",
+    "html-webpack-plugin": "^3.2.0",
+    "parcel-bundler": "^1.12.4",
+    "ts-loader": "^6.2.1",
+    "typesafe-actions": "^5.1.0",
+    "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "@types/redux-logger": "^3.0.7",
+    "@types/styled-components": "^4.4.2",
+    "connected-react-router": "^6.6.1",
+    "intl": "^1.2.5",
+    "js-cookie": "^2.2.1",
+    "logger": "^0.0.1",
+    "react": "^16.12.0",
+    "react-app-polyfill": "^1.0.6",
+    "react-dom": "^16.12.0",
+    "react-redux": "^7.1.3",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-logger": "^3.0.6",
+    "redux-saga": "^1.1.3",
+    "reselect": "^4.0.0",
+    "styled-components": "^5.0.1",
+    "units": "^5.2.0"
+  }
+}
