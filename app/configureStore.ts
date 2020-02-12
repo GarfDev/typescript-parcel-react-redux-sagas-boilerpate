@@ -8,9 +8,7 @@ import createSagaMiddleware from 'redux-saga';
 import logger from 'redux-logger';
 import createReducer from './reducers';
 import { InjectedStore } from 'types';
-
-//// IMPORT SAGA TO RUN
-import moduleSaga from "./containers//App//sagas"
+import rootSagas from "./rootSagas"
 
 declare interface IWindow extends Window {
   __REDUX_DEVTOOLS_EXTENSION_COMPOSE__: any; // redux-dev-tools definitions not needed
@@ -20,6 +18,7 @@ declare const window: IWindow;
 export default function configureStore(initialState = {}, history) {
   let composeEnhancers = compose;
   const reduxSagaMonitorOptions = {};
+
   // If Redux Dev Tools and Saga Dev Tools Extensions are installed, enable them
   /* istanbul ignore next */
   if (process.env.NODE_ENV !== 'production' && typeof window === 'object') {
@@ -59,6 +58,7 @@ export default function configureStore(initialState = {}, history) {
   store.runSaga = sagaMiddleware.run;
   store.injectedReducers = {}; // Reducer registry
   store.injectedSagas = {}; // Saga registry
+  sagaMiddleware.run(rootSagas)
   // Make reducers hot reloadable, see http://mxs.is/googmo
   /* istanbul ignore next */
   if (module['hot']) {

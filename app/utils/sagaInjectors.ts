@@ -7,7 +7,7 @@ import { Saga } from 'redux-saga';
 
 import checkStore from './checkStore';
 import { DAEMON, ONCE_TILL_UNMOUNT, RESTART_ON_REMOUNT } from './constants';
-import { InjectedStore } from '../types';
+import { InjectedStore } from 'types';
 
 const allowedModes = [RESTART_ON_REMOUNT, DAEMON, ONCE_TILL_UNMOUNT];
 
