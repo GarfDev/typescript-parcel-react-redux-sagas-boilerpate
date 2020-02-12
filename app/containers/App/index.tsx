@@ -1,7 +1,9 @@
 import React from "react";
+import styled from "styled-components"
 import { useDispatch } from 'react-redux';
-import styled from "styled-components";
+import { useInjectSaga } from '../../utils/injectSaga';
 import { loadSession } from "./actions";
+import saga from './saga';
 
 const AppWrapper = styled.div`
   height: 100vh;
@@ -30,6 +32,9 @@ const Button = styled.button`
 `
 
 export default function App() {
+
+  useInjectSaga({ key: "global", saga: saga });
+
   const dispatch = useDispatch();
   return (
     <AppWrapper>
