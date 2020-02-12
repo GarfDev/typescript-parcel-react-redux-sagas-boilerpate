@@ -14,6 +14,7 @@
   "devDependencies": {
     "@types/history": "^4.7.5",
     "@types/intl": "^1.2.0",
+    "@types/lodash": "^4.14.149",
     "@types/node": "^13.7.0",
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.5",
@@ -29,6 +30,7 @@
   "dependencies": {
     "@types/redux-logger": "^3.0.7",
     "@types/styled-components": "^4.4.2",
+    "axios": "^0.19.2",
     "connected-react-router": "^6.6.1",
     "intl": "^1.2.5",
     "js-cookie": "^2.2.1",
